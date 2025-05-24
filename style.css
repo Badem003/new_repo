@@ -1,0 +1,78 @@
+/* ====== Базові стилі для сторінки ====== */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	margin: 50px;
+}
+
+/* ====== Основний контейнер ====== */
+.container {
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ====== Центруючий flex-контейнер ====== */
+.container2 {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	border: none;
+	box-shadow: none;
+}
+
+/* ====== Стилі для input та button ====== */
+input, button {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+/* ====== Модальне вікно ====== */
+.modal {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	padding: 20px;
+	border: 1px solid #ddd;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+	z-index: 1000;
+}
+
+/* ====== Оверлей для модального вікна ====== */
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	z-index: 999;
+}
+
+/* ====== Список транзакцій ====== */
+.transactions {
+	margin-top: 20px;
+	height: 150px;
+	border: 1px solid #ddd;
+	overflow-y: auto;
+	text-align: left;
+	padding: 10px;
+	}

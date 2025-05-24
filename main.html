@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Банківська система - Вхід</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"></link>
+
+</head>
+<body>
+
+	<div class="container">
+		<h2>Банківська система</h2>
+		<form>
+			<input type="text" placeholder="Логін" required>
+			<input type="password" placeholder="Пароль" required>
+			<button type="submit" onclick="openMainWindow()">Увійти</button>
+		</form>
+		<p>Не маєте акаунту? <a href="#" onclick="showModal()">Зареєструватися</a></p>
+	</div>
+
+	<div class="overlay" id="overlay" onclick="closeModal()"></div>
+	<div class="modal" id="modal">
+		<h3>Реєстрація</h3>
+		<input id = "user_name" type="text" placeholder="Ім'я" required>
+		<input id = "user_email" type="email" placeholder="Email" required>
+		<input id = "user_password" type="password" placeholder="Пароль" required>
+		
+		<button type="submit" onclick="openMainWindow(); addUser(
+			document.getElementById('user_name').value,
+			document.getElementById('user_email').value,
+			document.getElementById('user_password').value
+			); return false;">Зареєструватися</button>
+
+		<button onclick="closeModal()">Закрити</button>
+	</div>
+
+	<script src="https://unpkg.com/dexie@3/dist/dexie.min.js"></script>
+	<script src="skript/skript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Банківська система - Головна</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+	<div class="container2">
+		<h2>Ласкаво просимо, <span id="username">Ім'я користувача</span></h2>
+		<p>Ваш баланс: <span class="balance" id="balance">0$</span></p>
+		
+		<button onclick="sendMoney()">Переслати</button>
+		<button onclick="spendMoney()">Витратити</button>
+		
+		<div class="transactions" id="transactions">
+			<h3>Історія транзакцій</h3>
+			<!-- Тут будуть з'являтися записи транзакцій -->
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/dexie@3/dist/dexie.min.js"></script>
+	<script src="skript/skript.js"></script>
+
+</body>
+</html>
